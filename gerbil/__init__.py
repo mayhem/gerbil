@@ -407,7 +407,7 @@ class Gerbil:
         if self._iface == None:
             self.logger.debug("{}: Setting up interface on {}".format(self.name, self._ifacepath))
 #            self._iface = Interface("iface_" + self.name, self._ifacepath, baudrate)
-            self._iface = SocketInterface("10.1.1.5", 23)
+            self._iface = SocketInterface("iface_10.1.1.4", "10.1.1.5", 23)
             self._iface.start(self._queue)
         else:
             self.logger.info("{}: Cannot start another interface. There is already an interface {}.".format(self.name, self._iface))
