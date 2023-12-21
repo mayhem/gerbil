@@ -903,8 +903,9 @@ class Gerbil:
     def _onread(self):
         while self._iface_read_do == True:
             line = self._queue.get()
-            
+         
             if len(line) > 0:
+                print("READ: [%s]" % line.strip())
                 if line[0] == "<":
                     self._update_state(line)
                     
