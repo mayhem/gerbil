@@ -899,6 +899,8 @@ class Gerbil:
         self._callback("on_write", line)
         if self._iface:
             num_written = self._iface.write(line)
+        else:
+            print("Warning: no iface, message not sent!")
         
     def _onread(self):
         while self._iface_read_do == True:
