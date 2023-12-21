@@ -907,7 +907,6 @@ class Gerbil:
             line = self._queue.get()
          
             if len(line) > 0:
-                print("READ: [%s]" % line.strip())
                 if line[0] == "<":
                     self._update_state(line)
                     
